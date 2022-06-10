@@ -1,0 +1,29 @@
+{
+  "name": "node-talker-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js --ignore 'talker.json'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrisSouzaMA/trybe-talker-manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrisSouzaMA/trybe-talker-manager/issues"
+  },
+  "homepage": "https://github.com/CrisSouzaMA/trybe-talker-manager#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "crypto.js": "^3.0.0",
+    "express": "^4.18.1",
+    "express-rescue": "^1.1.31",
+    "joi": "^17.6.0",
+    "nodemon": "^2.0.16"
+  }
+}
