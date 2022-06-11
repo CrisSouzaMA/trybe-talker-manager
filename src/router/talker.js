@@ -15,4 +15,13 @@ router.get('/', (_req, res) => {
   console.log('ola');
 });
 
+router.get('/:id', (req, res) => {
+  const { id } = req.params;
+  const talker = read(talkers);
+  const talkerId = talker.find((t) => t.id === Number(id));
+  if (!talkerId) return res.status(404).json({ message: 'Pessoa palestrante não encontrada' });
+
+  res.status(200).json(talkerId);
+})
+
 module.exports = router;
