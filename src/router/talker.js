@@ -36,5 +36,15 @@ router.post('/', checkToken, checkName, checkAge, checkTalk, (req, res) => {
   return res.status(201).json({ name, age, id: talks.length, talk });
 });
 
+router.put('/:id', checkToken, checkName, checkAge, checkTalk, (req, res) => {
+  const { id } = req.params;
+  const { name, age, talk } = req.body;
+  const talks = read(talker);
+  const talkIndex = talks.findIndex((r) => r.id === Number(id));
+  talks[talkIndex] = { ...talks[talkIndex], name, age, talk };
+  write('./talker.json', talks);
+  return res.status(200).json({ name, age, id: Number(id), talk });
+});
+
 
 module.exports = router;
