@@ -31,7 +31,7 @@ This project was made to practice basic NodeJS lessons.
 ```bash
     # Clonar repositório
 
-    $ git clone 
+    $ git clone git@github.com:CrisSouzaMA/trybe-talker-manager.git
 
     # Entrar no diretório
 
