@@ -16,7 +16,13 @@ router.get('/', (_req, res) => {
   if (talkerss === '') return res.status(HTTP_OK_STATUS).json([]);
   
   res.status(HTTP_OK_STATUS).json(talkerss);
-  console.log('ola');
+});
+
+router.get('/search', checkToken, (req, res) => {
+  const { q } = req.query;
+  const talk = read(talker);
+  const filteredName = talk.filter((n) => n.name.includes(q));
+  res.status(200).json(filteredName);
 });
 
 router.get('/:id', (req, res) => {
