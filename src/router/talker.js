@@ -46,5 +46,14 @@ router.put('/:id', checkToken, checkName, checkAge, checkTalk, (req, res) => {
   return res.status(200).json({ name, age, id: Number(id), talk });
 });
 
+router.delete('/:id', checkToken, (req, res) => {
+  const { id } = req.params;
+  const talks = read(talker);
+  const deleteId = talks.findIndex((r) => r.id === Number(id));
+  talks.splice(deleteId, 1);
+  write(talker, talks);
+  return res.status(204).json();
+});
+
 
 module.exports = router;
