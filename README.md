@@ -5,13 +5,13 @@
 <br>
 <br>
 
-## What is the project about?
+## Sobre o projeto:
 
-This project was made to practice basic NodeJS lessons.
+Esse projeto foi desenvolvido para a implementação de uma API usando lições básicas de NodeJS e Express.
 
 ---
 
-# Technologies used
+## Tecnologias usadas:
 - [SQL](https://www.w3schools.com/sql/)
 - [MySQL Workbench](https://www.mysql.com/products/workbench/)
 - [NodeJS](https://nodejs.org/en/about/)
@@ -19,14 +19,14 @@ This project was made to practice basic NodeJS lessons.
 
 #
 
-# Developed skills
+## Lições desenvolvidas:
  - Ler e escrever arquivos localmente usando o fs do NodeJS
  - Realizar operações assíncronas com Promises
  - Entender a construção de uma API com o uso do NodeJS e do Express
  - Entender o uso de middlewares
 #
 
-# Instruções
+## Instruções
 
 ```bash
     # Clonar repositório
